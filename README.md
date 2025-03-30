@@ -10,5 +10,5 @@ This setup is built for speed, clarity, and never leaving home row. If you want 
 A few highlights from the setup:
 
 <img src="./screenshots/tcp_demo.png" alt="Code editing with LSP and diagnostics" width="100%"/>
-<img src="./screenshots/go_testing.png" alt="Fuzzy finding and live grep" width="100%"/>
+<img src="./screenshots/paxos_error.png" alt="Fuzzy finding and live grep" width="100%"/>
 <img src="./screenshots/altrix_server_fg.png" alt="Fuzzy finding and live grep" width="100%"/>
