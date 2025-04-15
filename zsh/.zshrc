@@ -46,8 +46,6 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Aliases
-alias gcc="gcc-14"
-alias g++="g++-14"
 alias diff=colordiff
 alias fastfetch="fastfetch -c ~/.config/fastfetch/config.jsonc"
 
@@ -102,14 +100,6 @@ eval "$(fzf --zsh)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# Boost settings for eecs482 p4
-export CPLUS_INCLUDE_PATH="/usr/local/boost/include:$CPLUS_INCLUDE_PATH"
-export LIBRARY_PATH="/usr/local/boost/lib:$LIBRARY_PATH"
-export LD_LIBRARY_PATH="/usr/local/boost/lib:$LD_LIBRARY_PATH"
-export LDFLAGS="-L$(brew --prefix openssl@3)/lib"
-export CPPFLAGS="-I$(brew --prefix openssl@3)/include"
-export PKG_CONFIG_PATH="$(brew --prefix openssl@3)/lib/pkgconfig"
-
 # lfcd integration
 # NOTE: There are two assignments here. Remove or comment out the one you do not use.
 # Option 1: Source version from GOPATH (if applicable)
@@ -132,3 +122,7 @@ export EDITOR=nvim
 # Initialize zoxide.
 eval "$(zoxide init zsh)"
 alias cd='z'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

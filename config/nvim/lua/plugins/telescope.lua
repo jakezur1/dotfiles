@@ -10,7 +10,10 @@ return {
         {
           "<leader>ff",
           function()
-            builtin.find_files({ hidden = true })
+            builtin.find_files({
+              hidden = true,
+              no_ignore = true,
+            })
           end,
           desc = "Find File",
         },
@@ -55,8 +58,9 @@ return {
             theme = "ivy",
             hijack_netrw = true,
             grouped = true,
-            hidden = true, -- show hidden files in file_browser
-            initial_mode = "normal", -- start file_browser in normal mode
+            hidden = true,
+            initial_mode = "normal",
+            respect_gitignore = false,
           },
         },
         extensions_list = {
