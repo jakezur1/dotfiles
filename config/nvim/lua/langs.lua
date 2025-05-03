@@ -1,11 +1,13 @@
 return {
 	"clangd",
-	"pyright",
-	"lua_ls",
-	"rust_analyzer",
-	"gopls",
-	"tsserver",
 	"css-lsp",
-	"eslint_d",
+	"eslint-lsp",
+	"gopls",
 	"html-lsp",
+	"lua-language-server",
+	"pyright",
+	"ruff",
+	"ruff-lsp",
+	"rust-analyzer",
+	"tailwindcss-language-server"
 }

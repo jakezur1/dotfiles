@@ -29,5 +29,21 @@ return {
         end,
       },
     })
+    vim.api.nvim_create_user_command("MasonInstallAll", function()
+      local registry = require("mason-registry")
+      local langs = require("langs")
+
+      for _, server in ipairs(langs) do
+        local ok, pkg = pcall(registry.get_package, server)
+        if not ok then
+          print("Package not found: " .. server)
+        elseif not pkg:is_installed() then
+          print("Installing " .. server .. "...")
+          pkg:install()
+        else
+          print(server .. " is already installed.")
+        end
+      end
+    end, {})
   end,
 }
