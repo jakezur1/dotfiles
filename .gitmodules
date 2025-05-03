@@ -16,3 +16,6 @@
 [submodule "config/tmux/plugins/vim-tmux-navigator"]
 	path = config/tmux/plugins/vim-tmux-navigator
 	url = git@github.com:christoomey/vim-tmux-navigator.git
+[submodule "config/tmux/plugins/tmux"]
+	path = config/tmux/plugins/tmux
+	url = https://github.com/rose-pine/tmux
