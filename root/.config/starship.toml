@@ -1,0 +1,86 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$cpp\
+$cmd_duration\
+\n$character\
+"""
+
+palette = "catppuccin_mocha"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+# crust = "#11111b"
+
+# Character (prompt symbol)
+[character]
+success_symbol = "[❯](fg:mauve)"
+error_symbol = "[❯](fg:red)"
+vimcmd_symbol = "[❮](fg:peach)"
+
+# Directory
+[directory]
+format = "[ $path ]($style)"
+style = "fg:sky"
+truncation_length = 0
+
+# Git branch
+[git_branch]
+format = "[ $branch]($style)"
+style = "fg:lavender"
+
+[git_status]
+disabled = false
+style = "fg:red"
+format = '([ $all_status$ahead_behind]($style))'
+untracked = '[?](fg:yellow)'
+stashed = '[\$](fg:peach)'
+modified = '[!](fg:peach)'
+renamed = '[»](fg:yellow)'
+deleted = '[✘](fg:red)'
+staged = '[++](fg:green)'
+ahead = '[⇡\(${count}\)](fg:teal)'
+behind = '[⇣\(${count}\)](fg:rose)'
+
+# Python
+[python]
+format = ' [ $virtualenv]($style) '
+style = 'fg:green'
+
+# C++
+[cpp]
+format = ' [ $version]($style) '
+style = 'fg:blue'
+
+# Command duration
+[cmd_duration]
+format = ' [󰄉 $duration]($style)'
+style = 'fg:flamingo'
