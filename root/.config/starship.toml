@@ -1,11 +1,13 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
+$time\
 $directory\
 $git_branch\
 $git_status\
 $python\
 $cpp\
+$hostname\
 $cmd_duration\
 \n$character\
 """
@@ -38,7 +40,7 @@ surface1 = "#45475a"
 surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
-# crust = "#11111b"
+crust = "#11111b"
 
 # Character (prompt symbol)
 [character]
@@ -48,19 +50,19 @@ vimcmd_symbol = "[❮](fg:peach)"
 
 # Directory
 [directory]
-format = "[ $path ]($style)"
+format = "[$path ]($style)"
 style = "fg:sky"
 truncation_length = 0
 
 # Git branch
 [git_branch]
-format = "[ $branch]($style)"
+format = "on [ $branch ]($style)"
 style = "fg:lavender"
 
 [git_status]
 disabled = false
 style = "fg:red"
-format = '([ $all_status$ahead_behind]($style))'
+format = '([$all_status$ahead_behind ]($style))'
 untracked = '[?](fg:yellow)'
 stashed = '[\$](fg:peach)'
 modified = '[!](fg:peach)'
@@ -72,15 +74,24 @@ behind = '[⇣\(${count}\)](fg:rose)'
 
 # Python
 [python]
-format = ' [ $virtualenv]($style) '
+format = '[ $virtualenv ]($style) '
 style = 'fg:green'
 
 # C++
 [cpp]
-format = ' [ $version]($style) '
+format = '[ $version ]($style) '
 style = 'fg:blue'
 
 # Command duration
 [cmd_duration]
-format = ' [󰄉 $duration]($style)'
+format = '[󰄉 $duration ]($style)'
 style = 'fg:flamingo'
+
+[time]
+disabled=false
+style="teal"
+format="[\\[$time\\] ]($style)"
+
+[hostname]
+disabled=false
+format="[](bold fg:pink) on [$hostname ](fg:pink)"

@@ -79,6 +79,8 @@ zle -N zle-keymap-select
 ### Aliases ###
 alias diff=colordiff
 alias fastfetch="fastfetch -c ~/.config/fastfetch/config.jsonc"
+alias ls='eza $eza_params'
+alias lsa='eza --all --header --long $eza_params'
 
 ### Shell integrations ###
 eval "$(fzf --zsh)"
